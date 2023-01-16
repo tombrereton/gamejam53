@@ -47,4 +47,5 @@ jobs:
             folder: ${{ steps.export.outputs.build_directory }} # The folder the action should deploy.
             target-folder: /
             BUILD_FROM: main
+            clean: true
             
