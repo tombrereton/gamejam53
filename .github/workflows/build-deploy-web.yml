@@ -31,13 +31,6 @@ jobs:
             godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/3.5.1-stable/Godot_v3.5.1-stable_export_templates.tpz
             relative_project_path: ./
             archive_output: false
-        
-        
-        - name: Upload Artifact
-          uses: actions/upload-artifact@v1
-          with:
-            name: web
-            path: /home/runner/.local/share/godot/builds/HTML5/
 
 
         - name: Deploy to GitHub Pages 🚀
@@ -46,6 +39,5 @@ jobs:
             branch: gh-pages # The branch the action should deploy to.
             folder: ${{ steps.export.outputs.build_directory }} # The folder the action should deploy.
             target-folder: /
-            BUILD_FROM: main
             clean: true
             
